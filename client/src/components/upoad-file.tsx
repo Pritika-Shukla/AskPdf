@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export default function UploadFile() {
   const maxSizeMB = 2;
-  const maxSize = maxSizeMB * 1024 * 1024; // 2MB default
+  const maxSize = maxSizeMB * 1024 * 1024; 
   const [isUploading, setIsUploading] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
   const [uploadSuccess, setUploadSuccess] = useState(false);
@@ -145,7 +145,7 @@ export default function UploadFile() {
           <Button
             onClick={handleUpload}
             disabled={isUploading}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-xl shadow-lg transition-all duration-200 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-xl shadow-lg transition-all duration-200 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
           >
             {isUploading ? (
               <>
